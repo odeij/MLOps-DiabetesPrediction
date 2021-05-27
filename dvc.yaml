@@ -1,0 +1,9 @@
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - src/get_data.py
+    - src/load_data.py
+    - source_data/diabetes.csv
+    outs:
+    - data/raw/diabetes.csv

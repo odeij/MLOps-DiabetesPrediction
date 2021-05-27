@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: source_data/diabetes.csv
+      md5: 1c644ff1dd47bea0375d260747f2e40a
+      size: 23875
+    - path: src/get_data.py
+      md5: b773af9b5cb4fa662e711650234bb7e8
+      size: 712
+    - path: src/load_data.py
+      md5: 053a740b4bd7c880229c08aee6e94ad2
+      size: 595
+    outs:
+    - path: data/raw/diabetes.csv
+      md5: 60acca81995dc9744b499005ecfe6f2a
+      size: 24059
