@@ -17,7 +17,7 @@ split_data:
 estimators:
   LogisticRegression:
     params:
-      # The Elastic-Net mixing parameter, with 0 <= l1_ratio <= 1, is only used if penalty='elasticnet'
+      # The Elastic-Net mixing parameter, with 0 <= l1_ratio <= 1, is only used if penalty='elasticnet', which is only supported by saga solver
       # Setting l1_ratio=0 is equivalent to using penalty='l2', while setting l1_ratio=1 is equivalent to using penalty='l1'. For 0 < l1_ratio <1, the penalty is a combination of L1 and L2.
       solver: 'saga'
       penalty: 'elasticnet'
