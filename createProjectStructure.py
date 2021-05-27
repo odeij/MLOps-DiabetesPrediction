@@ -8,6 +8,8 @@ dirs = [
     "notebooks",
     "saved_models",
     "src"
+    "report"
+    "tests"
 ]
 
 for dir_ in dirs:
