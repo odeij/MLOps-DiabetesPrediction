@@ -16,3 +16,19 @@ stages:
     - path: data/raw/diabetes.csv
       md5: 60acca81995dc9744b499005ecfe6f2a
       size: 24059
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/diabetes.csv
+      md5: 60acca81995dc9744b499005ecfe6f2a
+      size: 24059
+    - path: src/split_data.py
+      md5: 3da0d56a4a1d7cb6fd2e8a4e19026a79
+      size: 1077
+    outs:
+    - path: data/processed/test_diabetes.csv
+      md5: 87a0acd072c4a9acbc6188e699e3cdad
+      size: 4889
+    - path: data/processed/train_diabetes.csv
+      md5: 0391aedb5ebb4b9f581d0a735000d674
+      size: 19268
